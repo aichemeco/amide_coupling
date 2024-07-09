@@ -24,37 +24,33 @@ def get_fingerprint_features(df, sub_1_col, sub_2_col, prod_col):
     features = np.hstack([sub_1_fp, sub_2_fp, prod_fp])
     return features
 
-# Load the datasets
-df = pd.read_csv('Data/DCC_with_mid_splited.csv')
-train1 = df[df['class'] == 'train']
-test1 = df[df['class'] == 'test']
+def RandomForest(df, sub1_column, sub2_column, product_column)
+    train1 = df[df['class'] == 'train']
+    test1 = df[df['class'] == 'test']
 
-# Extract features and labels
-X_train = get_fingerprint_features(train1, 'sub_1_smiles', 'sub_2_smiles', 'product_smiles')
-X_test = get_fingerprint_features(test1, 'sub_1_smiles', 'sub_2_smiles', 'product_smiles')
-y_train = train1['yield']
-y_test = test1['yield']
+    # Extract features and labels
+    X_train = get_fingerprint_features(train1, sub1_column, sub2_column, product_column)
+    X_test = get_fingerprint_features(test1, sub1_column, sub2_column, product_column)
+    y_train = train1['yield']
+    y_test = test1['yield']
 
-# Train the RandomForest model
-model = RandomForestRegressor(n_estimators=100, max_depth=None, random_state=42)  # Adjust hyperparameters as needed
-model.fit(X_train, y_train)
+    # Train the RandomForest model
+    model = RandomForestRegressor(n_estimators=100, max_depth=None, random_state=42)  # Adjust hyperparameters as needed
+    model.fit(X_train, y_train)
 
-# Save the model
-joblib.dump(model, 'random_forest_model.pkl')
+    # Save the model
+    joblib.dump(model, 'random_forest_model.pkl')
 
-# Load the model
-model = joblib.load('random_forest_model.pkl')
+    # Make predictions
+    y_pred = model.predict(X_test)
 
-# Make predictions
-y_pred = model.predict(X_test)
+    # Evaluate the model
+    mse = mean_squared_error(y_test, y_pred)
+    rmse = np.sqrt(mse)
+    mae = mean_absolute_error(y_test, y_pred)
+    r2 = r2_score(y_test, y_pred)
 
-# Evaluate the model
-mse = mean_squared_error(y_test, y_pred)
-rmse = np.sqrt(mse)
-mae = mean_absolute_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
-
-print(f'Mean Squared Error: {mse}')
-print(f'Mean Absolute Error (MAE): {mae}')
-print(f'Root Mean Squared Error (RMSE): {rmse}')
-print(f'R-squared (R2): {r2}')
+    print(f'Mean Squared Error: {mse}')
+    print(f'Mean Absolute Error (MAE): {mae}')
+    print(f'Root Mean Squared Error (RMSE): {rmse}')
+    print(f'R-squared (R2): {r2}')

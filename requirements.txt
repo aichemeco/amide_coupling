@@ -1,0 +1,14 @@
+# !!! Note that torch must be installed separately first, otherwise it will prompt that torch cannot be found in the setup.py of torch-scatter or torch-sparse.
+# Pure CPU environment: pip install torch==1.7.1 -i https://pypi.tuna.tsinghua.edu.cn/simple/
+# CPU or GPU environment: pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117
+
+pandas==2.0.3
+pandarallel==1.6.5
+transformers==4.24
+simpletransformers==0.63.11
+rdkit==2022.9.3
+loguru==0.7.0
+nni==2.10.1
+objprint==0.2.2
+pytest==7.4.0
+typer==0.9.0
