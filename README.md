@@ -34,8 +34,8 @@ When we build a multi-condition model, we construct the SMILES reaction in the f
 ## Machine learning
 ```python
 from model import train_machine_learning_model
-#Use model to select model("SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
-train_machine_learning_model(model,df,sub1_column, sub2_column, product_column)
+#Use model_type to select model("SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
+train_machine_learning_model(model_type,df,sub1_column, sub2_column, product_column)
 ```
 # Evaluation
 ```shell
