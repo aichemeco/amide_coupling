@@ -91,7 +91,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     condition = args.condition
     text_type = args.text_type
-    model_path = f"Bert_model/{condition}{text_type}/"
+    model_path = f"BERT_model/{condition}{text_type}/"
 
     df = load_data(condition)
     df['text'] = df[f'text{text_type}']
