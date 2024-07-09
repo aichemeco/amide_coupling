@@ -29,7 +29,8 @@ reposotory for yield BERT: https://github.com/rxn4chemistry/rxn_yields
 <br />
 reposotory for T5-Chem: https://github.com/HelloJocelynLu/t5chem
 <br />
-When we build a multi-condition model, we construct the SMILES reaction in the following form:
+First, we prepared 95 different conditions for HTE, excluding acyl chloride due to its incompatibility with DMF solvent and we construct the SMILES reaction in the following form for a multi-condition model:
+<br />
 "ammonia.acid.condition>>product"
 ## Machine learning
 ```python
@@ -37,6 +38,7 @@ from model import train_machine_learning_model
 #Use model to select model("SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
 train_machine_learning_model(model,df,sub1_column, sub2_column, product_column)
 ```
+When try to build machine learning model, each of the 95 different reaction conditions should be encoded as a unique integer ranging from 1 to 95. This encoding allowed the model to differentiate between various reaction setups.
 # Evaluation
 ```shell
 python BERT_evaluation.py --condition DCC --text_type 1
