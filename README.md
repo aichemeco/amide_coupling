@@ -28,15 +28,14 @@ from data_split import data_split
 reposotory for yield BERT: https://github.com/rxn4chemistry/rxn_yields
 <br />
 reposotory for T5-Chem: https://github.com/HelloJocelynLu/t5chem
-
+<br />
+When we build a multi-condition model, we construct the SMILES reaction in the following form:
+"ammonia.acid.condition>>product"
 ## Machine learning
 ```python
-from SVM import SVM
-SVM(df, sub1_column, sub2_column, product_column) #df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
-from XGBoost import XGBoost
-XGBoost(df, sub1_column, sub2_column, product_column)
-from RandomForest import RandomForest
-RandomForest(df, sub1_column, sub2_column, product_column)
+from model import train_machine_learning_model
+#Use model to select model("SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
+train_machine_learning_model(model,df,sub1_column, sub2_column, product_column)
 ```
 # Evaluation
 ```shell
