@@ -55,7 +55,7 @@ df_one_hot = pd.get_dummies(df, columns=[condition_id_column])
 ```
 # Evaluation
 ```shell
-python BERT_evaluation.py --condition DCC --text_type 1
+python BERT_evaluation.py --condition EDC --text_type 1
 ```
 text_type can be set as 1, 2 or 3.
 <br />
