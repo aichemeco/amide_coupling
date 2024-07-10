@@ -35,7 +35,7 @@ from data_split import data_split
 ```
 ## Model training
 ```python
-from model import train_machine_learning_model
+from models import train_machine_learning_model
 #Use model_type to select model("BERT", "T5", "SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
 train_machine_learning_model(model_type,df,sub1_column, sub2_column, product_column)
 ```
