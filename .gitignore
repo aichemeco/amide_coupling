@@ -1,1 +1,4 @@
-/Data/*.csv
+/Data/DCC_with_mid_splited.csv
+/Data/HBTU_with_mid_splited.csv
+/Data/PyBOP_with_mid_splited.csv
+/Data/TBTU_with_mid_splited.csv

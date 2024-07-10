@@ -12,3 +12,13 @@ nni==2.10.1
 objprint==0.2.2
 pytest==7.4.0
 typer==0.9.0
+selfies==1.0.4
+scikit-learn==0.24.1
+scipy==1.6.0
+tensorboard==2.6.0
+pandas==1.2.4
+rdkit-pypi==2022.9.5
+protobuf==3.20.*
+ipykernel
+matplotlib
+subprocess
