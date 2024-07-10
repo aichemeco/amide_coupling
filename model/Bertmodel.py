@@ -247,7 +247,7 @@ class SmilesClassificationModel(ClassificationModel):
 
         self.results = {}
 
-        self.tokenizer = SmilesTokenizer("data/vocab.txt", do_lower_case=False)
+        self.tokenizer = SmilesTokenizer("vocab.txt", do_lower_case=False)
 
         self.args.model_name = model_name
         self.args.model_type = model_type
