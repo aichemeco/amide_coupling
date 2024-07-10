@@ -1,6 +1,6 @@
 import torch
 import pandas as pd
-from rxnfp.models import SmilesClassificationModel
+from model.Bertmodel import SmilesClassificationModel
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from scipy.stats import pearsonr, spearmanr
 import numpy as np
