@@ -35,10 +35,13 @@ First, we prepared 95 different conditions for HTE, excluding acyl chloride due 
 ## Machine learning
 ```python
 from model import train_machine_learning_model
-#Use model to select model("SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
-train_machine_learning_model(model,df,sub1_column, sub2_column, product_column)
+#Use model_type to select model("SVM", "XGBoost" or "RandomForest"). df is yourdataset, sub1_column is the tiele of ammonia column, sub2_column is the title of acid column and product_column is the title of product column.
+train_machine_learning_model(model_type,df,sub1_column, sub2_column, product_column)
 ```
 If trying to build machine learning model with data under different conditions, each of the different reaction conditions should be encoded as a unique integer ranging from 1 to 95. This encoding allowed the model to differentiate between various reaction setups.
+```python
+df_one_hot = pd.get_dummies(df, columns=[condition_id_column])
+```
 # Evaluation
 ```shell
 python BERT_evaluation.py --condition DCC --text_type 1
