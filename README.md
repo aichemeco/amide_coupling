@@ -47,8 +47,16 @@ reposotory for T5-Chem: https://github.com/HelloJocelynLu/t5chem
 <br />
 First, we prepared 95 different conditions for HTE, excluding acyl chloride due to its incompatibility with DMF solvent and we construct the SMILES reaction in the following form for a multi-condition model:
 <br />
+<<<<<<< HEAD
 "amine.carboxylic_acid.condition_contexts>>product"
+=======
+"ammonia.acid.condition>>product"
+>>>>>>> 48353f99573b21fee63434c4f38b56190f3f490c
 ## Machine learning
+If trying to build machine learning model with data under different conditions, each of the different reaction conditions should be encoded as a unique integer ranging from 1 to 95. This encoding allowed the model to differentiate between various reaction setups.
+```python
+df_one_hot = pd.get_dummies(df, columns=[condition_id_column])
+```
 If trying to build machine learning model with data under different conditions, each of the different reaction conditions should be encoded as a unique integer ranging from 1 to 95. This encoding allowed the model to differentiate between various reaction setups.
 ```python
 df_one_hot = pd.get_dummies(df, columns=[condition_id_column])
