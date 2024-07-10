@@ -53,10 +53,6 @@ If trying to build machine learning model with data under different conditions, 
 ```python
 df_one_hot = pd.get_dummies(df, columns=[condition_id_column])
 ```
-If trying to build machine learning model with data under different conditions, each of the different reaction conditions should be encoded as a unique integer ranging from 1 to 95. This encoding allowed the model to differentiate between various reaction setups.
-```python
-df_one_hot = pd.get_dummies(df, columns=[condition_id_column])
-```
 # Evaluation
 ```shell
 python BERT_evaluation.py --condition DCC --text_type 1
