@@ -33,6 +33,9 @@ Data outside the 'train' class can be considered a randomly divided test set.
 from data_split import data_split
 
 ```
+## Visualization
+Use dimensionality_visualization.ipynb to do visualization.
+
 ## Model training
 ```python
 from models import train_machine_learning_model
