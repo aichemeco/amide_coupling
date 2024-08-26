@@ -1,12 +1,12 @@
 {
-  "_name_or_path": "/home/ShareFolder/models/bert_pretrained/",
+  "_name_or_path": "/home/denghao/pro/data/TBTU2/",
   "architectures": [
     "BertForSequenceClassification"
   ],
   "attention_probs_dropout_prob": 0.1,
   "classifier_dropout": null,
   "hidden_act": "gelu",
-  "hidden_dropout_prob": 0.05,
+  "hidden_dropout_prob": 0.1,
   "hidden_size": 256,
   "id2label": {
     "0": "LABEL_0"

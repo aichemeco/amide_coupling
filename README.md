@@ -33,9 +33,23 @@ Data outside the 'train' class can be considered a randomly divided test set.
 from data_split import data_split
 
 ```
+## Explanation of the dataset labels
+### Training
+In our work, we used three patterns to train our model:
+1. no intermediate
+2. amine + acid + intermediate → amide
+3. amine + intermediate → amide
+The input reaction SMILES of the first pattern is labeled as 'text1', the input reaction SMILES of the second pattern is labeled as 'text2' and the input reaction SMILES of the third pattern is labeled as 'text3'. These three columns could be found in our datasets.
+### 5-fold validation
+Also, we labeled the test data we used to train our data in 5-fold validation in column 'n-fold'.  
+In this column, 'fold-1-test' is the test data we used the first time.  
+'fold-2-test' is the test data we used the second time.  
+'fold-3-test' is the test data we used the third time.  
+'fold-4-test' is the test data we used the fourth time.  
+'fold-5-test' is the test data we used the fifth time.  
 ## Visualization
-Use dimensionality_visualization.ipynb to do visualization.
-
+Use dimensionality_visualization.ipynb to do visualization.  
+In our work, we employed four different methods to compare the differences between HTE data and USPTO data.
 ## Model training
 ```python
 from models import train_machine_learning_model
