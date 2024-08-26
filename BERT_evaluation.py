@@ -13,7 +13,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 def load_data(condition):
     """Load data for the given condition."""
     try:
-        df = pd.read_csv(f'Data/{condition}_with_mid_splited.csv')
+        df = pd.read_csv(f'data/{condition}_with_mid_splited.csv')
         return df
     except FileNotFoundError as e:
         logging.error(f"File not found: {e}")
