@@ -39,7 +39,7 @@ In our work, we used three patterns to train our model:
 1. no intermediate
 2. amine + acid + intermediate → amide
 3. amine + intermediate → amide  
-The input reaction SMILES of the first pattern is labeled as 'text1', the input reaction SMILES of the second pattern is labeled as 'text2' and the input reaction SMILES of the third pattern is labeled as 'text3'. These three columns could be found in our datasets.
+The input reaction SMILES of the first pattern is labeled as 'text1', the input reaction SMILES of the second pattern is labeled as 'text2' and the input reaction SMILES of the third pattern is labeled as 'text3'. These three columns could be found in our datasets. These reactions could be used when training or prediction.
 ### 5-fold validation
 Also, we labeled the test data we used to train our data in 5-fold validation in column 'n-fold'.  
 In this column, 'fold-1-test' is the test data we used the first time.  
