@@ -1,6 +1,8 @@
 # N-acylation reaction model
 This is the code for the "Intermediate Knowledge Enhanced the Performance of N-Acylation Yield Prediction Model" paper.
-Preprint of this paper can be found in [[Paper](url_to_be_anounced)].
+Preprint of this paper can be found in [[Paper](url_to_be_anounced)].  
+And you can use our models directly at the following website:  
+[www.aichemeco.com/acylation](https://www.aichemeco.com/acylation)
 
 ## Intermediate Knowledge Enhanced the Performance of N-Acylation Yield Prediction Model
 Authors: Chonghuan Zhang, Qianghua Lin, Hao Deng, Yaxian Kong, Zhunzhun Yu,* Kuangbiao Liao*
