@@ -25,7 +25,7 @@ pip install t5chem
 ```
 
 ## Data and data process
-In data file, we upload most data we used in our work.  
+In data folder, we upload most data we used in our work.  
 The structure of substrates we used for HTE is shown in  
 HTE Data-Substrate and Products.xlsx  
 Also, we uploaded our USPTO data in  
