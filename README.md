@@ -36,6 +36,12 @@ from data_split import data_split
 
 ```
 ## Explanation of the dataset labels
+### Data split
+In our data files, we labeled different datasets we used when training the model in column 'class'.  
+'train' means the data used to train our model.  
+'one' means the partial substrate novelty data used for model test.  
+'test' means the full substrate novelty data used for model test.  
+'remaining' means the test data which does not in partial substrate novelty data or full substrate novelty data, both substrates in these data have appeared in training data.
 ### Training
 In our work, we used three patterns to train our model:
 1. no intermediate
