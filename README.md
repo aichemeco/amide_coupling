@@ -24,7 +24,19 @@ pip install -r requirements.txt
 pip install t5chem
 ```
 
-## Data process
+## Data and data process
+In data file, we upload most data we used in our work.  
+The structure of substrates we used for HTE is shown in  
+HTE Data-Substrate and Products.xlsx  
+Also, we uploaded our USPTO data in  
+USPTO.csv  
+The HTE data we used to establish our model for six single condition is saved in the following files,  
+DCC_with_mid_splited.csv  
+EDC_with_mid_splited.csv  
+HATU_with_mid_splited.csv  
+HBTU_with_mid_splited.csv  
+PyBOP_with_mid_splited.csv  
+TBTU_with_mid_splited.csv  
 Use the following command for preprocessing
 ```shell
 python main.py your_dataset_path EDC
