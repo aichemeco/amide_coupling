@@ -90,7 +90,7 @@ Each layer in BERT’s architecture is composed of two main parts:
 2. Feedforward Neural Network: After applying self-attention, the output is passed through a feedforward neural network, which is the same across all positions in the sequence. This network processes each position independently but with the contextual information provided by the self-attention mechanism.  
 
 The outputs from these layers are then fed into the next layer, creating a deep, layered understanding of the text.  
-## Fine-Tuning BERT for Specific Tasks
+### Fine-Tuning BERT for Specific Tasks
 After BERT is pre-trained on large amounts of text, it can be fine-tuned for specific NLP tasks. Fine-tuning involves taking the pre-trained BERT model and training it further on a smaller, task-specific dataset. This is done by adding a small output layer on top of BERT and training the model on the new task.  
 
 For example, in a sentiment analysis task, the output layer might be a softmax layer that classifies text as positive or negative. The fine-tuning process is relatively quick and requires significantly less data than training a model from scratch, as BERT has already learned a general understanding of language during pre-training.  
