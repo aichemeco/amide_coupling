@@ -37,6 +37,8 @@ HATU_with_mid_splited.csv
 HBTU_with_mid_splited.csv  
 PyBOP_with_mid_splited.csv  
 TBTU_with_mid_splited.csv  
+Also, we have uploaded virtual compounds we used for  Min-Max Sampling in  
+virtual_compounds.xlsx
 Use the following command for preprocessing
 ```shell
 python main.py your_dataset_path EDC
