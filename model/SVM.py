@@ -24,7 +24,7 @@ def get_fingerprint_features(df, sub_1_col, sub_2_col, prod_col):
     features = np.hstack([sub_1_fp, sub_2_fp, prod_fp])
     return features
 
-def SVM(df, sub1_column, sub2_column, product_column)
+def SVM(df, sub1_column, sub2_column, product_column):
     train1 = df[df['class'] == 'train']
     test1 = df[df['class'] == 'test']
 
