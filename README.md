@@ -1,6 +1,6 @@
 # amide-coupling reaction model
 This is the code for the "Intermediate Knowledge Enhanced the Performance of N-Acylation Yield Prediction Model" paper.
-Preprint of this paper can be found in [[Paper](https://chemrxiv.org/engage/chemrxiv/article-details/66bdd53fa4e53c4876744a85)].  
+Preprint of this paper can be found in [[Paper](https://chemrxiv.org/engage/chemrxiv/article-details/67d288b3fa469535b90eb631)].  
 
 You can access our model interface using the following URL link: [amide-coupling model](https://www.aichemeco.com/acylation)
 
