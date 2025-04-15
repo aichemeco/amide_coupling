@@ -7,7 +7,7 @@ You can access our model interface using the following URL link: [amide-coupling
 ---
 
 ## Intermediate Knowledge Enhanced the Performance of amide-coupling Yield Prediction Model
-Authors: Chonghuan Zhang, Qianghua Lin, Hao Deng, Chenxi Yang, Yaxian Kong, Zhunzhun Yu,* Kuangbiao Liao*
+Authors: Chonghuan Zhang, Qianghua Lin, Chenxi Yang, Yaxian Kong, Zhunzhun Yu,* Kuangbiao Liao*
 
 Abstract: Amide coupling is an important reaction widely applied in medicinal chemistry. However, condition recommendation remains a challenging issue due to the broad conditions space. Recently, accurate condition recommendations via machine learning have emerged as a novel and efficient method to find a suitable condition to achieve the desired transformations. Nonetheless, accurately predicting yields is challenging due to the complex relationships involved. Herein, we present our strategy to address this problem. Two steps were taken to ensure the quality of the dataset. First, we selected a diverse and representative set of substrates to capture a broad spectrum of substrate structures and reaction conditions using an unbiased machine-based sampling approach. Second, experiments were conducted using our in-house high-throughput experimentation (HTE) platform to minimize the influence of human factors. Additionally, we proposed an intermediate knowledge-embedded strategy to enhance the model's robustness. The performance of the model was first evaluated at three different levels—random split, partial substrate novelty, and full substrate novelty. All model metrics in these cases improved dramatically, achieving an $R^2$ of 0.89, MAE of 6.1\%, and RMSE of 8.0\% in full substrate novelty test dataset. Moreover, the generalization of our strategy was assessed using external datasets from reported literature. The prediction error for 18 reactions among 88 was less than or equal to  5\%. Meanwhile, the model could recommend suitable conditions for some reactions to elevate the reaction yields. Besides, the model was able to identify which reaction in a reaction pair with a reactivity cliff had a higher yield. In summary, our research demonstrated the feasibility of achieving accurate yield predictions through the combination of HTE and embedding intermediate knowledge into the model. This approach also has the potential to facilitate other related machine learning tasks.
 
@@ -37,7 +37,7 @@ pip install t5chem
 
 ## Data and Preprocessing
 
-Most of the data used in this work is available in the `data` folder.
+All data used in this work is available in the `data` folder.
 
 - **HTE Substrate and Product Structures**:  
   See `HTE Data-Substrate and Products.xlsx` for substrate structures used in high-throughput experimentation (HTE).
@@ -56,6 +56,7 @@ Most of the data used in this work is available in the `data` folder.
 
 - **Virtual Compounds**:  
   Our virtual compounds used for Min-Max Sampling can be found in `virtual_compounds.xlsx`.
+  `all_HTE_with_codnition.csv`:all 47,000 HTE reaction data for amide coupling reaction using 95 reaction conditions.
 
 ### Preprocessing
 
@@ -104,6 +105,7 @@ For high-throughput experimentation (HTE), we prepared 95 unique conditions, exc
 ```plaintext
 amine.carboxylic_acid.condition_contexts>>product
 ```
+Using the BERT model and the NNI framework for automated hyperparameter tuning to train a yield prediction model.
 
 ---
 
